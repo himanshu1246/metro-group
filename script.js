@@ -123,6 +123,38 @@ function handleAmenitiesSwipe() {
     }
 }
 
+// Swipe support for Plan Carousel
+const planCarouselElement = document.querySelector('.plan-carousel');
+let planTouchStartX = 0;
+let planTouchEndX = 0;
+
+if (planCarouselElement) {
+    planCarouselElement.addEventListener('touchstart', e => {
+        planTouchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+    
+    planCarouselElement.addEventListener('touchend', e => {
+        planTouchEndX = e.changedTouches[0].screenX;
+        handlePlanSwipe();
+    }, {passive: true});
+}
+
+function handlePlanSwipe() {
+    if (planSlides.length === 0) return;
+    if (planTouchEndX < planTouchStartX - 40) {
+        // Swipe Left
+        let nextIndex = (currentPlanIndex + 1) % planSlides.length;
+        showPlanSlide(nextIndex);
+        startPlanCarousel();
+    }
+    if (planTouchEndX > planTouchStartX + 40) {
+        // Swipe Right
+        let prevIndex = (currentPlanIndex - 1 + planSlides.length) % planSlides.length;
+        showPlanSlide(prevIndex);
+        startPlanCarousel();
+    }
+}
+
 // Lightbox for Amenities
 amenityImages.forEach(img => {
     img.addEventListener('click', () => {

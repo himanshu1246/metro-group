@@ -679,6 +679,7 @@ a {
     transition: opacity 0.8s ease-in-out;
     pointer-events: none;
     background-color: #fff;
+    cursor: pointer;
 }
 
 .gallery-slide.active, .plan-slide.active {
