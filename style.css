@@ -953,7 +953,7 @@ input:focus, select:focus {
         flex-direction: column;
         width: 100%;
         gap: 1rem;
-        margin-top: auto; /* Pushes the buttons to the bottom navy area */
+        margin-top: 2rem;
         margin-bottom: 2rem;
     }
     
