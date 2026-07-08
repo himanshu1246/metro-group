@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King's Court | Metro Group</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <meta name="description" content="King's Court - Ultra-Smart Green Eco-Residence in Navi Mumbai. Crafted for the Crown by Metro Group.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Phosphor Icons for elegant line icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section" id="home">
+        <div class="hero-overlay"></div>
+        <header class="header">
+            <div class="logo-container">
+                <a href="#home">
+                    <img src="assets/logo.png" alt="Metro Group Logo" class="brand-logo">
+                </a>
+            </div>
+            <nav class="desktop-nav">
+                <a href="#overview">OVERVIEW</a>
+                <a href="#amenities">AMENITIES</a>
+                <a href="#residences">RESIDENCES</a>
+                <a href="#gallery">GALLERY</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#contact" class="btn btn-primary btn-small">ENQUIRE NOW</a>
+            </div>
+        </header>
+
+        <main class="hero-content">
+            <p class="subtitle">
+                <span class="highlight">METRO GROUP</span> PRESENTS
+            </p>
+            <h1 class="main-title">
+                King's<br>
+                <span class="highlight-text">Court</span>
+            </h1>
+            <p class="description">
+                Ultra-Smart Green Eco-Residence. Crafted for the Crown.
+            </p>
+            <div class="location">
+                <i class="ph ph-map-pin"></i>
+                Sector 16, New Panvel, Navi Mumbai
+            </div>
+            <div class="separator-line">
+                <div class="diamond"></div>
+            </div>
+            <div class="action-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    SCHEDULE A VISIT <i class="ph ph-arrow-right"></i>
+                </a>
+                <a href="#residences" class="btn btn-outline">
+                    VIEW RESIDENCES
+                </a>
+            </div>
+        </main>
+        <div class="scroll-indicator" id="scroll-to-overview">
+            <span class="scroll-text">EXPLORE</span>
+            <i class="ph ph-caret-down"></i>
+        </div>
+    </section>
+
+    <!-- 2. OVERVIEW SECTION -->
+    <section class="section overview-section" id="overview">
+        <div class="container split-layout">
+            <div class="split-content">
+                <h2 class="section-title">A Vision of Elegance</h2>
+                <div class="gold-divider"></div>
+                <p class="body-text">
+                    Welcome to King's Court, a masterpiece of modern architecture seamlessly blending luxury with sustainability. Every detail is meticulously crafted to offer an unparalleled living experience, set amidst the vibrant landscape of Navi Mumbai.
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3 class="stat-value">G+30</h3>
+                        <p class="stat-label">Storeys</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-value">2, 3 & 4</h3>
+                        <p class="stat-label">BHK Residences</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-value">₹ 1.5Cr*</h3>
+                        <p class="stat-label">Starting Price</p>
+                    </div>
+                </div>
+            </div>
+            <div class="split-image">
+                <div class="image-wrapper night-render">
+                    <img src="assets/building image 1.png" alt="Building Night Render" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. AMENITIES SECTION -->
+    <section class="section amenities-section" id="amenities">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">World-Class Amenities</h2>
+                <div class="gold-divider center"></div>
+                <p class="body-text">Indulge in a lifestyle curated for the select few.</p>
+            </div>
+            
+            <div class="amenities-selector">
+                <div class="selector-tabs" style="flex-wrap: wrap; justify-content: center; gap: 1rem;">
+                    <button class="tab-btn active" data-target="deck">The King's Deck</button>
+                    <button class="tab-btn" data-target="pool">Swimming Pool</button>
+                    <button class="tab-btn" data-target="badminton">Badminton Court</button>
+                    <button class="tab-btn" data-target="football">Football Court</button>
+                    <button class="tab-btn" data-target="kids">Kids Play Area</button>
+                    <button class="tab-btn" data-target="garden">Garden & Sitting Area</button>
+                </div>
+                <div class="selector-content">
+                    <div class="amenity-image active" id="deck" style="background-image: url('assets/the%20kings%20deck%20aminities.png');">
+                        <div class="amenity-caption">The King's Deck</div>
+                    </div>
+                    <div class="amenity-image" id="pool" style="background-image: url('assets/swimming%20pool%20aminities.png');">
+                        <div class="amenity-caption">Swimming Pool</div>
+                    </div>
+                    <div class="amenity-image" id="badminton" style="background-image: url('assets/batminton%20court%20aminities.png');">
+                        <div class="amenity-caption">Badminton Court</div>
+                    </div>
+                    <div class="amenity-image" id="football" style="background-image: url('assets/football%20court%20aminities.png');">
+                        <div class="amenity-caption">Football Court</div>
+                    </div>
+                    <div class="amenity-image" id="kids" style="background-image: url('assets/kids%20play%20area%20aminities.png');">
+                        <div class="amenity-caption">Kids Play Area</div>
+                    </div>
+                    <div class="amenity-image" id="garden" style="background-image: url('assets/garden%20and%20sitting%20area%20aminities.png');">
+                        <div class="amenity-caption">Garden & Sitting Area</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOOR PLANS SECTION -->
+    <section class="section" id="floor-plans">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Master & Floor Plans</h2>
+                <div class="gold-divider center"></div>
+                <p class="body-text">Unlock exclusive access to our detailed floor plans and layouts.</p>
+            </div>
+            
+            <div class="floor-plan-grid">
+                <!-- 8 plan images -->
+                <div class="plan-item locked" data-src="assets/floor%20paln%201.png">
+                    <img src="assets/floor%20paln%201.png" alt="Floor Plan 1">
+                    <div class="lock-overlay">
+                        <i class="ph ph-lock-key" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
+                        <span>Enquire to Unlock</span>
+                    </div>
+                </div>
+                <div class="plan-item locked" data-src="assets/floor%20plan%202%20.png">
+                    <img src="assets/floor%20plan%202%20.png" alt="Floor Plan 2">
+                    <div class="lock-overlay">
+                        <i class="ph ph-lock-key" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
+                        <span>Enquire to Unlock</span>
+                    </div>
+                </div>
+                <div class="plan-item locked" data-src="assets/floor%20plan%203.png">
+                    <img src="assets/floor%20plan%203.png" alt="Floor Plan 3">
+                    <div class="lock-overlay">
+                        <i class="ph ph-lock-key" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
+                        <span>Enquire to Unlock</span>
+                    </div>
+                </div>
+                <div class="plan-item locked" data-src="assets/floor%20plan%204.png">
+                    <img src="assets/floor%20plan%204.png" alt="Floor Plan 4">
+                    <div class="lock-overlay">
+                        <i class="ph ph-lock-key" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
+                        <span>Enquire to Unlock</span>
+                    </div>
+                </div>
+                <div class="plan-item locked" data-src="assets/floor%20plan%205.png">
+                    <img src="assets/floor%20plan%205.png" alt="Floor Plan 5">
+                    <div class="lock-overlay">
+                        <i class="ph ph-lock-key" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
+                        <span>Enquire to Unlock</span>
+                    </div>
+                </div>
+                <div class="plan-item locked" data-src="assets/floor%20plan%206.png">
+                    <img src="assets/floor%20plan%206.png" alt="Floor Plan 6">
+                    <div class="lock-overlay">
+                        <i class="ph ph-lock-key" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
+                        <span>Enquire to Unlock</span>
+                    </div>
+                </div>
+                <div class="plan-item locked" data-src="assets/podium%20plan.png">
+                    <img src="assets/podium%20plan.png" alt="Podium Plan">
+                    <div class="lock-overlay">
+                        <i class="ph ph-lock-key" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
+                        <span>Enquire to Unlock</span>
+                    </div>
+                </div>
+                <div class="plan-item locked" data-src="assets/typical%20layout%20plan.png">
+                    <img src="assets/typical%20layout%20plan.png" alt="Typical Layout Plan">
+                    <div class="lock-overlay">
+                        <i class="ph ph-lock-key" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
+                        <span>Enquire to Unlock</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. RESIDENCES SECTION -->
+    <section class="section residences-section" id="residences">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">The Residences</h2>
+                <div class="gold-divider center"></div>
+                <p class="body-text">Spacious layouts designed for modern royalty.</p>
+            </div>
+            
+            <div class="cards-container">
+                <!-- 2 BHK -->
+                <div class="residence-card">
+                    <div class="card-header">
+                        <h3>2 BHK Premium</h3>
+                        <span class="price">From ₹ 1.5 Cr</span>
+                    </div>
+                    <div class="card-body">
+                        <ul class="features-list">
+                            <li><i class="ph ph-ruler"></i> 750 - 850 Sq.Ft. Carpet</li>
+                            <li><i class="ph ph-bed"></i> 2 Bedrooms</li>
+                            <li><i class="ph ph-buildings"></i> Mid-to-High Floors</li>
+                            <li><i class="ph ph-sun"></i> East/West Facing</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="assets/floor paln 1.png" target="_blank" class="btn btn-outline btn-full">VIEW FLOOR PLAN</a>
+                    </div>
+                </div>
+
+                <!-- 3 BHK -->
+                <div class="residence-card highlight-card">
+                    <div class="card-badge">Most Popular</div>
+                    <div class="card-header">
+                        <h3>3 BHK Luxury</h3>
+                        <span class="price">From ₹ 2.2 Cr</span>
+                    </div>
+                    <div class="card-body">
+                        <ul class="features-list">
+                            <li><i class="ph ph-ruler"></i> 1100 - 1250 Sq.Ft. Carpet</li>
+                            <li><i class="ph ph-bed"></i> 3 Bedrooms + Deck</li>
+                            <li><i class="ph ph-buildings"></i> High Floors</li>
+                            <li><i class="ph ph-wind"></i> Excellent Cross Ventilation</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="assets/floor plan 3.png" target="_blank" class="btn btn-primary btn-full">VIEW FLOOR PLAN</a>
+                    </div>
+                </div>
+
+                <!-- 4 BHK -->
+                <div class="residence-card">
+                    <div class="card-header">
+                        <h3>4 BHK Penthouse</h3>
+                        <span class="price">From ₹ 4.5 Cr</span>
+                    </div>
+                    <div class="card-body">
+                        <ul class="features-list">
+                            <li><i class="ph ph-ruler"></i> 2200+ Sq.Ft. Carpet</li>
+                            <li><i class="ph ph-bed"></i> 4 Bedrooms + Private Terrace</li>
+                            <li><i class="ph ph-buildings"></i> Top 3 Floors</li>
+                            <li><i class="ph ph-crown"></i> Ultra Luxury Finishes</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="assets/floor plan 5.png" target="_blank" class="btn btn-outline btn-full">VIEW FLOOR PLAN</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. GALLERY SECTION -->
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Gallery</h2>
+                <div class="gold-divider center"></div>
+                <p class="body-text">Explore the elegance of King's Court.</p>
+            </div>
+            
+            <div class="gallery-carousel">
+                <div class="gallery-slide active" style="background-image: url('assets/building%20image%202%20.png');">
+                    <div class="gallery-overlay"><span>Facade Night Render</span></div>
+                </div>
+                <div class="gallery-slide" style="background-image: url('assets/luxury_spa_1783489904916.png');">
+                    <div class="gallery-overlay"><span>Wellness Spa</span></div>
+                </div>
+                <div class="gallery-slide" style="background-image: url('assets/luxury_living_room_1783489884750.png');">
+                    <div class="gallery-overlay"><span>Luxury Living Room</span></div>
+                </div>
+                <div class="gallery-slide" style="background-image: url('assets/luxury_garden_1783489895004.png');">
+                    <div class="gallery-overlay"><span>Eco Gardens</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. LOCATION SECTION -->
+    <section class="section location-section" id="location">
+        <div class="container split-layout reverse">
+            <div class="split-content">
+                <h2 class="section-title">Unmatched Connectivity</h2>
+                <div class="gold-divider"></div>
+                <p class="body-text">Strategically located in Sector 16, New Panvel, offering seamless connectivity to major hubs.</p>
+                
+                <ul class="distance-list">
+                    <li>
+                        <div class="dist-icon"><i class="ph ph-train"></i></div>
+                        <div class="dist-info">
+                            <h4>Panvel Railway Station</h4>
+                            <span>5 mins</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dist-icon"><i class="ph ph-airplane"></i></div>
+                        <div class="dist-info">
+                            <h4>Navi Mumbai Int. Airport</h4>
+                            <span>15 mins</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dist-icon"><i class="ph ph-road-horizon"></i></div>
+                        <div class="dist-info">
+                            <h4>Mumbai-Pune Expressway</h4>
+                            <span>10 mins</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dist-icon"><i class="ph ph-shopping-bag"></i></div>
+                        <div class="dist-info">
+                            <h4>Orion Mall</h4>
+                            <span>8 mins</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="split-image map-container">
+                <!-- Embedded Google Map with dark invert filter to match the palette -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15090.187313264426!2d73.1098!3d19.006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e83000000000%3A0x0!2sSector%2016%2C%20New%20Panvel%2C%20Navi%20Mumbai!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+        <div class="container split-layout">
+            <div class="split-content">
+                <h2 class="section-title">Schedule a Visit</h2>
+                <div class="gold-divider"></div>
+                <p class="body-text">Register your interest and our luxury property consultants will get in touch with you shortly.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="ph ph-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph ph-envelope"></i>
+                        <span>sales@kingscourt.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph ph-map-pin-line"></i>
+                        <span>Site Address: Sector 16, New Panvel,<br>Navi Mumbai, Maharashtra 410206</span>
+                    </div>
+                </div>
+            </div>
+            <div class="split-form">
+                <form id="enquiry-form" class="enquiry-form">
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required placeholder="Email Address">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" required placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <select id="bhk" required>
+                            <option value="" disabled selected>Interested In</option>
+                            <option value="2bhk">2 BHK Premium</option>
+                            <option value="3bhk">3 BHK Luxury</option>
+                            <option value="4bhk">4 BHK Penthouse</option>
+                        </select>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="consent" required>
+                        <label for="consent">I agree to the <a href="terms-of-use.html" class="legal-link">terms and conditions</a> and <a href="privacy-policy.html" class="legal-link">privacy policy</a> and consent to being contacted.</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">SUBMIT ENQUIRY</button>
+                    <div id="form-success" class="form-success" style="display: none;">
+                        <i class="ph ph-check-circle"></i> Thank you! We will contact you soon.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="Metro Group Logo" style="max-height: 60px; margin-bottom: 1rem;">
+                    <p class="footer-desc">Crafting landmarks since 1995. Building different.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#amenities">Amenities</a></li>
+                        <li><a href="#residences">Residences</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-rera">
+                    <h4>MahaRERA Registration</h4>
+                    <p>The project has been registered via MahaRERA registration number: <strong>P52000000001</strong> and is available on the website maharera.mahaonline.gov.in under registered projects.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Metro Group. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-use.html">Terms of Use</a>
+                    <a href="disclaimer.html">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ENQUIRY MODAL -->
+    <div class="modal-overlay" id="enquiry-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close"><i class="ph ph-x"></i></button>
+            <h3 class="modal-title">Express Your Interest</h3>
+            <p class="modal-desc">Register your interest and our luxury property consultants will get in touch with you.</p>
+            <form class="enquiry-form">
+                <div class="form-group">
+                    <input type="text" required placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" required placeholder="Email Address">
+                </div>
+                <div class="form-group">
+                    <input type="tel" required placeholder="Phone Number">
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="" disabled selected>Interested In</option>
+                        <option value="2bhk">2 BHK Premium</option>
+                        <option value="3bhk">3 BHK Luxury</option>
+                        <option value="4bhk">4 BHK Penthouse</option>
+                    </select>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" required>
+                    <label>I agree to the <a href="terms-of-use.html" class="legal-link">terms and conditions</a> and <a href="privacy-policy.html" class="legal-link">privacy policy</a> and consent to being contacted.</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">SUBMIT ENQUIRY</button>
+                <div class="form-success" style="display: none;">
+                    <i class="ph ph-check-circle"></i> Thank you! We will contact you soon.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close"><i class="ph ph-x"></i></button>
+        <img id="lightbox-img" src="" alt="Full Screen Plan">
+    </div>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 256 256">
+            <path d="M187.58,144.84l-32-16a8,8,0,0,0-8,1.5l-19.24,16a80.38,80.38,0,0,1-36.77-36.77l16-19.24a8,8,0,0,0,1.5-8l-16-32a8,8,0,0,0-9.73-5.44C76,46.98,41.4,56,41.4,96.39a159.27,159.27,0,0,0,118.21,118.21C200,214.6,209,180,211.08,172.63A8,8,0,0,0,187.58,144.84Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+            <path d="M128,216a87.65,87.65,0,0,1-42.54-10.9L40,216l10.9-45.46A87.65,87.65,0,0,1,40,128c0-48.6,39.4-88,88-88s88,39.4,88,88S176.6,216,128,216Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
