@@ -659,7 +659,7 @@ a {
     margin-top: 3rem;
 }
 
-.gallery-slide, .plan-slide {
+.gallery-slide {
     position: absolute;
     inset: 0;
     background-size: cover;
@@ -667,6 +667,18 @@ a {
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
     pointer-events: none;
+}
+
+.plan-slide {
+    position: absolute;
+    inset: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    pointer-events: none;
+    background-color: #fff;
 }
 
 .gallery-slide.active, .plan-slide.active {
@@ -1160,7 +1172,7 @@ input:focus, select:focus {
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
-    background: #fff;
+    background-color: #fff;
 }
 
 /* Locked state styles */
