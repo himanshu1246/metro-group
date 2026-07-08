@@ -650,7 +650,7 @@ a {
     background-color: var(--navy-bg);
 }
 
-.gallery-carousel {
+.gallery-carousel, .plan-carousel {
     position: relative;
     width: 100%;
     height: 600px;
@@ -659,7 +659,7 @@ a {
     margin-top: 3rem;
 }
 
-.gallery-slide {
+.gallery-slide, .plan-slide {
     position: absolute;
     inset: 0;
     background-size: cover;
@@ -669,7 +669,7 @@ a {
     pointer-events: none;
 }
 
-.gallery-slide.active {
+.gallery-slide.active, .plan-slide.active {
     opacity: 1;
     z-index: 1;
     pointer-events: all;
@@ -1154,35 +1154,16 @@ input:focus, select:focus {
 }
 
 /* Floor Plans Section */
-.floor-plan-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
 .plan-item {
     position: relative;
     border: 1px solid rgba(201, 168, 76, 0.2);
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
-    background: #fff; /* Ensure plans have white bg for visibility */
-}
-
-.plan-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: contain;
-    display: block;
-    transition: filter 0.3s ease;
-    padding: 1rem;
+    background: #fff;
 }
 
 /* Locked state styles */
-.plan-item.locked img {
-    filter: blur(12px) brightness(0.8);
-    pointer-events: none;
-}
 
 .plan-item .lock-overlay {
     position: absolute;

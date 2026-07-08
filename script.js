@@ -278,6 +278,31 @@ function unlockPlans() {
     });
 }
 
+// Plan Carousel Auto-play Logic
+const planSlides = document.querySelectorAll('.plan-slide');
+let planInterval;
+let currentPlanIndex = 0;
+
+function showPlanSlide(index) {
+    if (planSlides.length === 0) return;
+    
+    planSlides.forEach(slide => slide.classList.remove('active'));
+    planSlides[index].classList.add('active');
+    currentPlanIndex = index;
+}
+
+function startPlanCarousel() {
+    if(planInterval) clearInterval(planInterval);
+    planInterval = setInterval(() => {
+        let nextIndex = (currentPlanIndex + 1) % planSlides.length;
+        showPlanSlide(nextIndex);
+    }, 4000); // 4 seconds
+}
+
+if (planSlides.length > 0) {
+    startPlanCarousel();
+}
+
 // Brochure Button Logic
 const brochureBtns = document.querySelectorAll('.brochure-btn');
 brochureBtns.forEach(btn => {
