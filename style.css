@@ -1165,16 +1165,6 @@ input:focus, select:focus {
     font-size: 0.9rem;
 }
 
-/* Floor Plans Section */
-.plan-item {
-    position: relative;
-    border: 1px solid rgba(201, 168, 76, 0.2);
-    border-radius: 8px;
-    overflow: hidden;
-    cursor: pointer;
-    background-color: #fff;
-}
-
 /* Locked state styles */
 
 .plan-item .lock-overlay {
