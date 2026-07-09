@@ -659,6 +659,42 @@ a {
     margin-top: 3rem;
 }
 
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(14, 18, 30, 0.7);
+    color: var(--gold-primary);
+    border: 1px solid var(--gold-secondary);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.carousel-nav:hover {
+    background: var(--gold-primary);
+    color: var(--navy-bg);
+}
+
+.carousel-nav i {
+    font-size: 1.5rem;
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
 .gallery-slide {
     position: absolute;
     inset: 0;
@@ -933,6 +969,10 @@ input:focus, select:focus {
 }
 
 @media (max-width: 768px) {
+    .carousel-nav {
+        display: none !important;
+    }
+
     body, html {
         overflow-x: hidden;
         width: 100%;

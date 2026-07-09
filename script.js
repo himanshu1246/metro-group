@@ -137,6 +137,23 @@ if (planCarouselElement) {
         planTouchEndX = e.changedTouches[0].screenX;
         handlePlanSwipe();
     }, {passive: true});
+    // Navigation buttons
+    const prevBtn = planCarouselElement.querySelector('.prev-btn');
+    const nextBtn = planCarouselElement.querySelector('.next-btn');
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            let prevIndex = (currentPlanIndex - 1 + planSlides.length) % planSlides.length;
+            showPlanSlide(prevIndex);
+            startPlanCarousel();
+        });
+    }
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            let nextIndex = (currentPlanIndex + 1) % planSlides.length;
+            showPlanSlide(nextIndex);
+            startPlanCarousel();
+        });
+    }
 }
 
 function handlePlanSwipe() {
@@ -173,8 +190,11 @@ amenityImages.forEach(img => {
 
 // Gallery Carousel Logic
 const gallerySlides = document.querySelectorAll('.gallery-slide');
+const galleryCarouselElement = document.querySelector('.gallery-carousel');
 let galleryInterval;
 let currentGalleryIndex = 0;
+let galleryTouchStartX = 0;
+let galleryTouchEndX = 0;
 
 function showGallerySlide(index) {
     if (gallerySlides.length === 0) return;
@@ -194,6 +214,52 @@ function startGalleryCarousel() {
 
 if (gallerySlides.length > 0) {
     startGalleryCarousel();
+}
+
+if (galleryCarouselElement) {
+    // Swipe support
+    galleryCarouselElement.addEventListener('touchstart', e => {
+        galleryTouchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+    
+    galleryCarouselElement.addEventListener('touchend', e => {
+        galleryTouchEndX = e.changedTouches[0].screenX;
+        handleGallerySwipe();
+    }, {passive: true});
+    
+    // Navigation buttons
+    const prevBtn = galleryCarouselElement.querySelector('.prev-btn');
+    const nextBtn = galleryCarouselElement.querySelector('.next-btn');
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            let prevIndex = (currentGalleryIndex - 1 + gallerySlides.length) % gallerySlides.length;
+            showGallerySlide(prevIndex);
+            startGalleryCarousel();
+        });
+    }
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            let nextIndex = (currentGalleryIndex + 1) % gallerySlides.length;
+            showGallerySlide(nextIndex);
+            startGalleryCarousel();
+        });
+    }
+}
+
+function handleGallerySwipe() {
+    if (gallerySlides.length === 0) return;
+    if (galleryTouchEndX < galleryTouchStartX - 40) {
+        // Swipe Left
+        let nextIndex = (currentGalleryIndex + 1) % gallerySlides.length;
+        showGallerySlide(nextIndex);
+        startGalleryCarousel();
+    }
+    if (galleryTouchEndX > galleryTouchStartX + 40) {
+        // Swipe Right
+        let prevIndex = (currentGalleryIndex - 1 + gallerySlides.length) % gallerySlides.length;
+        showGallerySlide(prevIndex);
+        startGalleryCarousel();
+    }
 }
 
 // Contact Form & Modal Logic
