@@ -231,6 +231,9 @@ if (modalCloseBtn) {
 // Start timer on load
 startModalTimer();
 
+// Replace with your Google Apps Script Web App URL
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxoLZwGAVqU7vLKroILHMW4lnacQLiVNKjKzhj8UWqaeX4HZjkkJmeoPBFDz7-yoRg9sw/exec';
+
 // Handle all enquiry forms
 enquiryForms.forEach(form => {
     form.addEventListener('submit', (e) => {
@@ -243,35 +246,45 @@ enquiryForms.forEach(form => {
         btn.innerHTML = 'SENDING...';
         btn.disabled = true;
         
-        setTimeout(() => {
-            // Mark as submitted so modal stops popping up
-            hasSubmitted = true;
-            clearInterval(modalTimer);
-            
-            // Unlock all floor plans
-            if (typeof unlockPlans === 'function') {
-                unlockPlans();
-            }
-            
-            // Show success message
-            successMsg.style.display = 'block';
-            
-            // Reset form
-            form.reset();
-            
-            // Reset button
-            btn.innerHTML = originalText;
-            btn.disabled = false;
-            
-            // Close modal if it was open
-            setTimeout(() => {
-                successMsg.style.display = 'none';
-                if (enquiryModal.classList.contains('active')) {
-                    enquiryModal.classList.remove('active');
+        const formData = new FormData(form);
+
+        fetch(scriptURL, { method: 'POST', body: formData})
+            .then(response => {
+                // Mark as submitted so modal stops popping up
+                hasSubmitted = true;
+                clearInterval(modalTimer);
+                
+                // Unlock all floor plans
+                if (typeof unlockPlans === 'function') {
+                    unlockPlans();
                 }
-            }, 3000);
-            
-        }, 1500);
+                
+                // Show success message
+                successMsg.style.display = 'block';
+                
+                // Reset form
+                form.reset();
+                
+                // Reset button
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                
+                // Close modal if it was open
+                setTimeout(() => {
+                    successMsg.style.display = 'none';
+                    if (enquiryModal && enquiryModal.classList.contains('active')) {
+                        enquiryModal.classList.remove('active');
+                    }
+                }, 3000);
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                btn.innerHTML = 'Error! Try Again';
+                btn.disabled = false;
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 3000);
+            });
     });
 });
 
