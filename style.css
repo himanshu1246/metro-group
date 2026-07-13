@@ -131,7 +131,7 @@ a {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background-image: url('assets/building image 2.png');
+    background-image: url('assets/building horizontal new image.jpeg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -718,12 +718,12 @@ a {
     cursor: pointer;
 }
 
-.gallery-bldg-2 { background-image: url('assets/building image 2.png'); }
-.gallery-bldg-3 { background-image: url('assets/building image 3.png'); }
+.gallery-bldg-2 { background-image: url('assets/night view building horizontal new image  new image.jpeg'); }
+.gallery-bldg-3 { background-image: url('assets/building horizontal new image.jpeg'); }
 
 @media (max-width: 992px) {
-    .gallery-bldg-2 { background-image: url('assets/building image 2  vertical.png'); }
-    .gallery-bldg-3 { background-image: url('assets/building image 3 vertical.png'); }
+    .gallery-bldg-2 { background-image: url('assets/night view building vertical new image.jpeg'); }
+    .gallery-bldg-3 { background-image: url('assets/building vertical new image.jpeg'); }
 }
 
 .gallery-slide.active, .plan-slide.active {
@@ -1005,7 +1005,7 @@ input:focus, select:focus {
     }
     
     .hero-section {
-        background-image: url('assets/building image 2  vertical.png');
+        background-image: url('assets/building vertical new image.jpeg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
