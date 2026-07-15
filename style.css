@@ -131,11 +131,21 @@ a {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background-image: url('assets/building horizontal new image.jpeg');
-    background-size: cover;
-    background-position: center;
     display: flex;
     flex-direction: column;
+}
+
+.hero-image-container {
+    width: 100%;
+    margin-top: 100px;
+    padding: 0 5%;
+}
+
+.hero-responsive-image {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    max-height: 65vh;
 }
 
 .hero-overlay {
@@ -1007,11 +1017,16 @@ input:focus, select:focus {
     }
     
     .hero-section {
-        background-image: url('assets/building vertical new image.jpeg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         background-color: var(--navy-bg);
+    }
+
+    .hero-image-container {
+        padding: 0 1.5rem;
+        margin-top: 80px;
+    }
+
+    .hero-responsive-image {
+        max-height: 50vh;
     }
     
     .header {
@@ -1042,7 +1057,7 @@ input:focus, select:focus {
     
     .hero-content {
         justify-content: flex-start;
-        padding-top: 28vh; /* Pushes the text down into the pink box */
+        padding-top: 2rem; 
     }
 
     .action-buttons {
