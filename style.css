@@ -436,6 +436,8 @@ a {
 }
 
 .stat-value {
+    font-family: var(--font-body);
+    font-weight: 500;
     font-size: 2rem;
     color: var(--gold-primary);
     margin-bottom: 0.5rem;
