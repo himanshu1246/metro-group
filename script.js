@@ -267,7 +267,16 @@ const enquiryForms = document.querySelectorAll('.enquiry-form');
 const enquiryModal = document.getElementById('enquiry-modal');
 const modalCloseBtn = document.getElementById('modal-close');
 let modalTimer;
-let hasSubmitted = false;
+let hasSubmitted = sessionStorage.getItem('hasSubmitted') === 'true';
+
+// If already submitted in this session, unlock plans immediately
+if (hasSubmitted) {
+    window.addEventListener('DOMContentLoaded', () => {
+        if (typeof unlockPlans === 'function') {
+            unlockPlans();
+        }
+    });
+}
 
 // Function to show modal
 function showModal() {
@@ -316,32 +325,11 @@ enquiryForms.forEach(form => {
 
         fetch(scriptURL, { method: 'POST', body: formData})
             .then(response => {
-                // Mark as submitted so modal stops popping up
-                hasSubmitted = true;
-                clearInterval(modalTimer);
+                // Mark as submitted in session storage
+                sessionStorage.setItem('hasSubmitted', 'true');
                 
-                // Unlock all floor plans
-                if (typeof unlockPlans === 'function') {
-                    unlockPlans();
-                }
-                
-                // Show success message
-                successMsg.style.display = 'block';
-                
-                // Reset form
-                form.reset();
-                
-                // Reset button
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-                
-                // Close modal if it was open
-                setTimeout(() => {
-                    successMsg.style.display = 'none';
-                    if (enquiryModal && enquiryModal.classList.contains('active')) {
-                        enquiryModal.classList.remove('active');
-                    }
-                }, 3000);
+                // Redirect to thank you page
+                window.location.href = 'thank-you.html';
             })
             .catch(error => {
                 console.error('Error!', error.message);
