@@ -862,8 +862,8 @@ a {
 }
 
 select option {
-    background: var(--navy-bg);
-    color: var(--text-white);
+    background: #ffffff;
+    color: #000000;
 }
 
 input:focus, select:focus {

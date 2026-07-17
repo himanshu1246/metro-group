@@ -486,3 +486,85 @@ if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
         );
     });
 }
+
+// Vision Carousel Logic
+const visionSlides = document.querySelectorAll('.vision-slide');
+const visionCarouselElement = document.querySelector('.vision-carousel');
+let visionInterval;
+let currentVisionIndex = 0;
+let visionTouchStartX = 0;
+let visionTouchEndX = 0;
+
+function showVisionSlide(index) {
+    if (visionSlides.length === 0) return;
+    
+    visionSlides.forEach(slide => {
+        slide.style.opacity = '0';
+        slide.style.zIndex = '0';
+        slide.style.pointerEvents = 'none';
+        slide.classList.remove('active');
+    });
+    visionSlides[index].style.opacity = '1';
+    visionSlides[index].style.zIndex = '1';
+    visionSlides[index].style.pointerEvents = 'all';
+    visionSlides[index].classList.add('active');
+    currentVisionIndex = index;
+}
+
+function startVisionCarousel() {
+    if(visionInterval) clearInterval(visionInterval);
+    visionInterval = setInterval(() => {
+        let nextIndex = (currentVisionIndex + 1) % visionSlides.length;
+        showVisionSlide(nextIndex);
+    }, 4000);
+}
+
+if (visionSlides.length > 0) {
+    startVisionCarousel();
+}
+
+if (visionCarouselElement) {
+    // Swipe support
+    visionCarouselElement.addEventListener('touchstart', e => {
+        visionTouchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+    
+    visionCarouselElement.addEventListener('touchend', e => {
+        visionTouchEndX = e.changedTouches[0].screenX;
+        handleVisionSwipe();
+    }, {passive: true});
+    
+    // Navigation buttons
+    const prevBtn = visionCarouselElement.querySelector('.vision-prev');
+    const nextBtn = visionCarouselElement.querySelector('.vision-next');
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            let prevIndex = (currentVisionIndex - 1 + visionSlides.length) % visionSlides.length;
+            showVisionSlide(prevIndex);
+            startVisionCarousel();
+        });
+    }
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            let nextIndex = (currentVisionIndex + 1) % visionSlides.length;
+            showVisionSlide(nextIndex);
+            startVisionCarousel();
+        });
+    }
+}
+
+function handleVisionSwipe() {
+    if (visionSlides.length === 0) return;
+    if (visionTouchEndX < visionTouchStartX - 40) {
+        // Swipe Left
+        let nextIndex = (currentVisionIndex + 1) % visionSlides.length;
+        showVisionSlide(nextIndex);
+        startVisionCarousel();
+    }
+    if (visionTouchEndX > visionTouchStartX + 40) {
+        // Swipe Right
+        let prevIndex = (currentVisionIndex - 1 + visionSlides.length) % visionSlides.length;
+        showVisionSlide(prevIndex);
+        startVisionCarousel();
+    }
+}

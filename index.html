@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>King's Court | Metro Group</title>
-    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <meta name="description" content="King's Court - Ultra-Smart Green Eco-Residence in Navi Mumbai. Crafted for the Crown by Metro Group.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -97,11 +97,23 @@
                 <div class="gold-divider"></div>
             </div>
             
-            <div class="image-wrapper night-render gs-reveal" style="margin: 2rem 0;">
-                <picture>
-                    <source media="(max-width: 768px)" srcset="assets/vertical%20building%20image%202.jpeg">
-                    <img src="assets/horizontal%20building%20image.png" alt="A Vision of Elegance" style="width: 100%; border-radius: 8px; object-fit: cover; max-height: 600px;" />
-                </picture>
+            <div class="image-wrapper night-render vision-carousel gs-reveal" style="margin: 2rem 0; position: relative;">
+                <div style="display: grid; grid-template-columns: 1fr;">
+                    <div class="vision-slide active" style="grid-area: 1 / 1; opacity: 1; transition: opacity 0.8s ease-in-out; z-index: 1;">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="assets/vertical%20building%20image%202.jpeg">
+                            <img src="assets/horizontal%20building%20image.png" alt="A Vision of Elegance 2" style="width: 100%; border-radius: 8px; object-fit: cover; max-height: 600px; display: block;" />
+                        </picture>
+                    </div>
+                    <div class="vision-slide" style="grid-area: 1 / 1; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 0; pointer-events: none;">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="assets/building%20image%203%20vertical.jpeg">
+                            <img src="assets/building%20image%203%20horizontal.jpeg" alt="A Vision of Elegance 3" style="width: 100%; border-radius: 8px; object-fit: cover; max-height: 600px; display: block;" />
+                        </picture>
+                    </div>
+                </div>
+                <button class="carousel-nav prev-btn vision-prev" aria-label="Previous Slide" style="z-index: 2;"><i class="ph ph-caret-left"></i></button>
+                <button class="carousel-nav next-btn vision-next" aria-label="Next Slide" style="z-index: 2;"><i class="ph ph-caret-right"></i></button>
             </div>
 
             <div class="gs-reveal">
@@ -398,7 +410,7 @@
                 <p class="body-text">Strategically located in Sector 16, New Panvel, offering seamless connectivity to major hubs.</p>
                 
                 <div class="mobile-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15090.187313264426!2d73.1098!3d19.006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e83000000000%3A0x0!2sSector%2016%2C%20New%20Panvel%2C%20Navi%20Mumbai!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://maps.google.com/maps?q=18.9995468,73.1063863&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
 
                 <ul class="distance-list">
@@ -434,7 +446,7 @@
             </div>
             <div class="split-image map-container">
                 <!-- Embedded Google Map with dark invert filter to match the palette -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15090.187313264426!2d73.1098!3d19.006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e83000000000%3A0x0!2sSector%2016%2C%20New%20Panvel%2C%20Navi%20Mumbai!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://maps.google.com/maps?q=18.9995468,73.1063863&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
