@@ -267,7 +267,7 @@ const enquiryForms = document.querySelectorAll('.enquiry-form');
 const enquiryModal = document.getElementById('enquiry-modal');
 const modalCloseBtn = document.getElementById('modal-close');
 let modalTimer;
-let hasSubmitted = sessionStorage.getItem('hasSubmitted') === 'true';
+let hasSubmitted = localStorage.getItem('hasSubmitted') === 'true';
 
 // If already submitted in this session, unlock plans immediately
 if (hasSubmitted) {
@@ -325,8 +325,8 @@ enquiryForms.forEach(form => {
 
         fetch(scriptURL, { method: 'POST', body: formData})
             .then(response => {
-                // Mark as submitted in session storage
-                sessionStorage.setItem('hasSubmitted', 'true');
+                // Mark as submitted in local storage
+                localStorage.setItem('hasSubmitted', 'true');
                 
                 // Redirect to thank you page
                 window.location.href = 'thank-you.html';
