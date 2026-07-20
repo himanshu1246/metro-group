@@ -14,7 +14,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- 1. HERO SECTION -->
@@ -55,8 +54,8 @@
 
         <div class="hero-image-container gs-reveal">
             <picture>
-                <source media="(max-width: 768px)" srcset="assets/main%20building%20image%20vertical.jpeg">
-                <img src="assets/main%20building%20image%20horizontal.jpeg" alt="King's Court Building" class="hero-responsive-image">
+                <source media="(max-width: 768px)" srcset="assets/main-building-image-vertical.jpeg">
+                <img src="assets/main-building-image-horizontal.jpeg" alt="King's Court Building" class="hero-responsive-image">
             </picture>
         </div>
 
@@ -101,14 +100,14 @@
                 <div style="display: grid; grid-template-columns: 1fr;">
                     <div class="vision-slide active" style="grid-area: 1 / 1; opacity: 1; transition: opacity 0.8s ease-in-out; z-index: 1;">
                         <picture>
-                            <source media="(max-width: 768px)" srcset="assets/vertical%20building%20image%202.jpeg">
-                            <img src="assets/horizontal%20building%20image.png" alt="A Vision of Elegance 2" style="width: 100%; border-radius: 8px; object-fit: cover; max-height: 600px; display: block;" />
+                            <source media="(max-width: 768px)" srcset="assets/vertical-building-image-2.jpeg">
+                            <img src="assets/horizontal-building-image.png" alt="A Vision of Elegance 2" style="width: 100%; border-radius: 8px; object-fit: cover; max-height: 600px; display: block;" />
                         </picture>
                     </div>
                     <div class="vision-slide" style="grid-area: 1 / 1; opacity: 0; transition: opacity 0.8s ease-in-out; z-index: 0; pointer-events: none;">
                         <picture>
-                            <source media="(max-width: 768px)" srcset="assets/building%20image%203%20vertical.jpeg">
-                            <img src="assets/building%20image%203%20horizontal.jpeg" alt="A Vision of Elegance 3" style="width: 100%; border-radius: 8px; object-fit: cover; max-height: 600px; display: block;" />
+                            <source media="(max-width: 768px)" srcset="assets/building-image-3-vertical.jpeg">
+                            <img src="assets/building-image-3-horizontal.jpeg" alt="A Vision of Elegance 3" style="width: 100%; border-radius: 8px; object-fit: cover; max-height: 600px; display: block;" />
                         </picture>
                     </div>
                 </div>
@@ -135,7 +134,7 @@
                     </div>
                 </div>
                 <div style="margin-top: 2.5rem; text-align: center;">
-                    <a href="javascript:void(0)" class="btn btn-outline brochure-btn locked" data-src="assets/Metro_Presenter_18x12%20IN_R1%20copy%20(2).pdf"><i class="ph ph-download" style="margin-right: 0.5rem;"></i>DOWNLOAD BROCHURE <i class="ph ph-lock-key lock-icon" style="margin-left: 0.5rem;"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-outline brochure-btn locked" data-src="assets/metro-presenter-18x12-in-r1-copy-2.pdf"><i class="ph ph-download" style="margin-right: 0.5rem;"></i>DOWNLOAD BROCHURE <i class="ph ph-lock-key lock-icon" style="margin-left: 0.5rem;"></i></a>
                 </div>
             </div>
         </div>
@@ -164,22 +163,22 @@
                     <div class="amenity-image active" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" id="deck" style="background-image: url('assets/amenities/the king\'s deck aminities new image.jpeg');">
                         <div class="amenity-caption">The King's Deck</div>
                     </div>
-                    <div class="amenity-image" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" id="pool" style="background-image: url('assets/amenities/swimming pool aminities new image.jpeg');">
+                    <div class="amenity-image" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" id="pool" style="background-image: url('assets/amenities/swimming-pool-aminities-new-image.jpeg');">
                         <div class="amenity-caption">Swimming Pool</div>
                     </div>
-                    <div class="amenity-image" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" id="badminton" style="background-image: url('assets/amenities/badminton court aminities new image.jpeg');">
+                    <div class="amenity-image" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" id="badminton" style="background-image: url('assets/amenities/badminton-court-aminities-new-image.jpeg');">
                         <div class="amenity-caption">Badminton Court</div>
                     </div>
-                    <div class="amenity-image" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" id="football" style="background-image: url('assets/amenities/football court aminites new image.jpeg');">
+                    <div class="amenity-image" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" id="football" style="background-image: url('assets/amenities/football-court-aminites-new-image.jpeg');">
                         <div class="amenity-caption">Football Court</div>
                     </div>
                     <div class="amenity-image" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" id="kids" style="background-image: url('assets/amenities/kid\'s play area aminities new image.jpeg');">
                         <div class="amenity-caption">Kids Play Area</div>
                     </div>
-                    <div class="amenity-image" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" id="garden" style="background-image: url('assets/amenities/garden and sitting area amenities .png');">
+                    <div class="amenity-image" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" id="garden" style="background-image: url('assets/amenities/garden-and-sitting-area-amenities.png');">
                         <div class="amenity-caption">Garden & Sitting Area</div>
                     </div>
-                    <div class="amenity-image" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" id="gym" style="background-image: url('assets/amenities/amenities%20gym.jpeg');">
+                    <div class="amenity-image" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" id="gym" style="background-image: url('assets/amenities/amenities-gym.jpeg');">
                         <div class="amenity-caption">Gym</div>
                     </div>
                 </div>
@@ -200,70 +199,70 @@
                 <button class="carousel-nav prev-btn" aria-label="Previous Slide"><i class="ph ph-caret-left"></i></button>
                 <button class="carousel-nav next-btn" aria-label="Next Slide"><i class="ph ph-caret-right"></i></button>
                 <!-- 8 plan images -->
-                <div class="plan-item plan-slide active locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/floor%20paln%201.png" style="background-image: url('assets/plan/floor%20paln%201.png');">
+                <div class="plan-item plan-slide active locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/floor-paln-1.png" style="background-image: url('assets/plan/floor-paln-1.png');">
                     <div class="gallery-overlay"><span>Floor Plan 1</span></div>
                     <div class="lock-overlay">
                         <i class="ph ph-lock-key" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
                         <span>Enquire to Unlock</span>
                     </div>
                 </div>
-                <div class="plan-item plan-slide locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/floor%20plan%202%20.png" style="background-image: url('assets/plan/floor%20plan%202%20.png');">
+                <div class="plan-item plan-slide locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/floor-plan-2.png" style="background-image: url('assets/plan/floor-plan-2.png');">
                     <div class="gallery-overlay"><span>Floor Plan 2</span></div>
                     <div class="lock-overlay">
                         <i class="ph ph-lock-key" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
                         <span>Enquire to Unlock</span>
                     </div>
                 </div>
-                <div class="plan-item plan-slide locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/floor%20plan%203.png" style="background-image: url('assets/plan/floor%20plan%203.png');">
+                <div class="plan-item plan-slide locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/floor-plan-3.png" style="background-image: url('assets/plan/floor-plan-3.png');">
                     <div class="gallery-overlay"><span>Floor Plan 3</span></div>
                     <div class="lock-overlay">
                         <i class="ph ph-lock-key" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
                         <span>Enquire to Unlock</span>
                     </div>
                 </div>
-                <div class="plan-item plan-slide locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/floor%20plan%204.png" style="background-image: url('assets/plan/floor%20plan%204.png');">
+                <div class="plan-item plan-slide locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/floor-plan-4.png" style="background-image: url('assets/plan/floor-plan-4.png');">
                     <div class="gallery-overlay"><span>Floor Plan 4</span></div>
                     <div class="lock-overlay">
                         <i class="ph ph-lock-key" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
                         <span>Enquire to Unlock</span>
                     </div>
                 </div>
-                <div class="plan-item plan-slide locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/floor%20plan%205.png" style="background-image: url('assets/plan/floor%20plan%205.png');">
+                <div class="plan-item plan-slide locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/floor-plan-5.png" style="background-image: url('assets/plan/floor-plan-5.png');">
                     <div class="gallery-overlay"><span>Floor Plan 5</span></div>
                     <div class="lock-overlay">
                         <i class="ph ph-lock-key" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
                         <span>Enquire to Unlock</span>
                     </div>
                 </div>
-                <div class="plan-item plan-slide locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/floor%20plan%206.png" style="background-image: url('assets/plan/floor%20plan%206.png');">
+                <div class="plan-item plan-slide locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/floor-plan-6.png" style="background-image: url('assets/plan/floor-plan-6.png');">
                     <div class="gallery-overlay"><span>Floor Plan 6</span></div>
                     <div class="lock-overlay">
                         <i class="ph ph-lock-key" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
                         <span>Enquire to Unlock</span>
                     </div>
                 </div>
-                <div class="plan-item plan-slide locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/podium%20plan.png" style="background-image: url('assets/plan/podium%20plan.png');">
+                <div class="plan-item plan-slide locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/podium-plan.png" style="background-image: url('assets/plan/podium-plan.png');">
                     <div class="gallery-overlay"><span>Podium Plan</span></div>
                     <div class="lock-overlay">
                         <i class="ph ph-lock-key" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
                         <span>Enquire to Unlock</span>
                     </div>
                 </div>
-                <div class="plan-item plan-slide locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/typical%20layout%20plan.png" style="background-image: url('assets/plan/typical%20layout%20plan.png');">
+                <div class="plan-item plan-slide locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/typical-layout-plan.png" style="background-image: url('assets/plan/typical-layout-plan.png');">
                     <div class="gallery-overlay"><span>Typical Layout Plan</span></div>
                     <div class="lock-overlay">
                         <i class="ph ph-lock-key" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
                         <span>Enquire to Unlock</span>
                     </div>
                 </div>
-                <div class="plan-item plan-slide locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/office%20plan.jpeg" style="background-image: url('assets/plan/office%20plan.jpeg');">
+                <div class="plan-item plan-slide locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/office-plan.jpeg" style="background-image: url('assets/plan/office-plan.jpeg');">
                     <div class="gallery-overlay"><span>Office Plan</span></div>
                     <div class="lock-overlay">
                         <i class="ph ph-lock-key" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
                         <span>Enquire to Unlock</span>
                     </div>
                 </div>
-                <div class="plan-item plan-slide locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/hall%20plan.jpeg" style="background-image: url('assets/plan/hall%20plan.jpeg');">
+                <div class="plan-item plan-slide locked" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" data-src="assets/plan/hall-plan.jpeg" style="background-image: url('assets/plan/hall-plan.jpeg');">
                     <div class="gallery-overlay"><span>Hall Plan</span></div>
                     <div class="lock-overlay">
                         <i class="ph ph-lock-key" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
@@ -306,7 +305,7 @@
                         </ul>
                     </div>
                     <div class="card-footer">
-                        <a href="assets/plan/floor paln 1.png" target="_blank" class="btn btn-outline btn-full">VIEW FLOOR PLAN</a>
+                        <a href="assets/plan/floor-paln-1.png" target="_blank" class="btn btn-outline btn-full">VIEW FLOOR PLAN</a>
                     </div>
                 </div>
 
@@ -325,7 +324,7 @@
                         </ul>
                     </div>
                     <div class="card-footer">
-                        <a href="assets/plan/floor plan 3.png" target="_blank" class="btn btn-primary btn-full">VIEW FLOOR PLAN</a>
+                        <a href="assets/plan/floor-plan-3.png" target="_blank" class="btn btn-primary btn-full">VIEW FLOOR PLAN</a>
                     </div>
                 </div>
 
@@ -343,7 +342,7 @@
                         </ul>
                     </div>
                     <div class="card-footer">
-                        <a href="assets/plan/floor plan 5.png" target="_blank" class="btn btn-outline btn-full">VIEW FLOOR PLAN</a>
+                        <a href="assets/plan/floor-plan-5.png" target="_blank" class="btn btn-outline btn-full">VIEW FLOOR PLAN</a>
                     </div>
                 </div>
             </div>
@@ -362,46 +361,46 @@
             <div class="gallery-carousel">
                 <button class="carousel-nav prev-btn" aria-label="Previous Slide"><i class="ph ph-caret-left"></i></button>
                 <button class="carousel-nav next-btn" aria-label="Next Slide"><i class="ph ph-caret-right"></i></button>
-                <div class="gallery-slide active" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery%201.jpeg');">
+                <div class="gallery-slide active" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery-1.jpeg');">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery%202.jpeg');">
+                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery-2.jpeg');">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery%203.jpeg');">
+                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery-3.jpeg');">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery%204.jpeg');">
+                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery-4.jpeg');">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery%205.jpeg');">
+                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery-5.jpeg');">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery%206.jpeg');">
+                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery-6.jpeg');">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery%207.jpeg');">
+                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery-7.jpeg');">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery%208.jpeg');">
+                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery-8.jpeg');">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery%209.jpeg');">
+                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery-9.jpeg');">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery%2010.jpeg');">
+                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery-10.jpeg');">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery%2011.jpeg');">
+                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery-11.jpeg');">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery%2012.jpeg');">
+                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery-12.jpeg');">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery%2013.jpeg');">
+                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery-13.jpeg');">
                     <div class="gallery-overlay"></div>
                 </div>
-                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery%2014.png');">
+                <div class="gallery-slide" data-tilt data-tilt-speed="200" data-tilt-glare data-tilt-max-glare="0.5" style="background-image: url('assets/gallery/gallery-14.png');">
                     <div class="gallery-overlay"></div>
                 </div>
             </div>
@@ -529,7 +528,7 @@
                 </div>
                 <div class="footer-rera">
                     <h4>MahaRERA Registration</h4>
-                    <p>The project has been registered via MahaRERA registration number: <strong><a href="assets/rera certificate.pdf" target="_blank" class="rera-link">PR1270002502386</a></strong> and is available on the website maharera.mahaonline.gov.in under registered projects.</p>
+                    <p>The project has been registered via MahaRERA registration number: <strong><a href="assets/rera-certificate.pdf" target="_blank" class="rera-link">PR1270002502386</a></strong> and is available on the website maharera.mahaonline.gov.in under registered projects.</p>
                 </div>
             </div>
             <div class="footer-bottom">
